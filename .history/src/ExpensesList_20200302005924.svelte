@@ -13,10 +13,8 @@ export let expenses = [];
 <section>
     <SectionTitle title= 'expense list' />
     <ul>
-        {#each expenses as expense, index}
-            <!-- <Expense {expense}/> -->
-            <!-- Anothr way below -->
-            <Expense {...expense} />
+        {#each expenses as expense}
+            <Expense />
             {:else}
                 <h2>Currently you have no expenses</h2>
         {/each}

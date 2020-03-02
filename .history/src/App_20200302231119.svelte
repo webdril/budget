@@ -1,5 +1,4 @@
 <script>
-import {setContext} from 'svelte';
 // components
 import Navbar from './Navbar.svelte'
 import ExpensesList from './ExpensesList.svelte'
@@ -12,10 +11,10 @@ let expenses = [...expensesData];
 
 // functions
 function removeExpense(id){
-	expenses = expenses.filter(item =>item.id !== id);
+	expenses = expenses.filter(item =>NavigationPreloadManager.id 
+	!== id);
 }
-// context
-setContext('remove', removeExpense)
+
 </script> 
 
 <!-- CSS/STYLING -->

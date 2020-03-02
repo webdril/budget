@@ -11,7 +11,6 @@ let displayAmount = false;
 function toggleAmount () {
     displayAmount = !displayAmount
 }
-const removeExpense = getContext('remove');
 </script>
 
 <article class="single-expense">

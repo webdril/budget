@@ -1,5 +1,4 @@
 <script>
-import {getContext} from 'svelte';
 // export let expense
 // let {name, amount} = expense
 // Another method below
@@ -11,7 +10,6 @@ let displayAmount = false;
 function toggleAmount () {
     displayAmount = !displayAmount
 }
-const removeExpense = getContext('remove');
 </script>
 
 <article class="single-expense">

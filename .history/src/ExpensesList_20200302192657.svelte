@@ -15,8 +15,7 @@ export let expenses = [];
     <ul>
         {#each expenses as expense, index}
             <!-- <Expense {expense}/> -->
-            <!-- Anothr way below -->
-            <Expense {...expense} />
+            <Expense {...expense}/>
             {:else}
                 <h2>Currently you have no expenses</h2>
         {/each}

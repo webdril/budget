@@ -1,5 +1,4 @@
 <script>
-import {setContext} from 'svelte';
 // components
 import Navbar from './Navbar.svelte'
 import ExpensesList from './ExpensesList.svelte'
@@ -14,8 +13,7 @@ let expenses = [...expensesData];
 function removeExpense(id){
 	expenses = expenses.filter(item =>item.id !== id);
 }
-// context
-setContext('remove', removeExpense)
+
 </script> 
 
 <!-- CSS/STYLING -->
