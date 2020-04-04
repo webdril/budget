@@ -27,7 +27,7 @@ const setModifiedExpense = getContext("modify");
         {/if}
     </div>
     <div class="expense-button">
-        <button class="expense-btn edit-btn" on:click="{()=>setModifiedExpense(id)}">
+        <button class="expense-btn edit-btn">
             <i class="fas fa-pen" />
         </button>
           <button class="expense-btn delete-btn" 

@@ -12,8 +12,8 @@ import expensesData from './expenses';
 // variables
 let expenses = [...expensesData];
 // Setvariables
-let setName = "values";
-let setAmount = 1000;
+let setName = "";
+let setAmount = null;
 let setId = null;
 // reactive
 $: total = expenses.reduce((acc, curr) => {
@@ -41,7 +41,6 @@ function setModifiedExpense(id){
 	setId = expense.id;
 	setName = expense.name;
 	setAmount= expense.amount
-	console.log({setId, setName, setAmount});
 }
 // context
 setContext('remove', removeExpense)
@@ -52,7 +51,7 @@ setContext('modify', setModifiedExpense)
 
 <Navbar /> 
 <main class="content">
-<ExpenseForm  {addExpense} name={setName} amount={setAmount} />
+<ExpenseForm  {addExpense}/>
 	<Totals title="total expenses" {total} />
 	<ExpensesList {expenses}/>
 	<button type="button" class="btn btn-primary btn-block" on:click={clearExpenses}> Clear Expenses</button>

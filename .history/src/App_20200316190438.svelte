@@ -12,8 +12,8 @@ import expensesData from './expenses';
 // variables
 let expenses = [...expensesData];
 // Setvariables
-let setName = "values";
-let setAmount = 1000;
+let setName = "";
+let setAmount = null;
 let setId = null;
 // reactive
 $: total = expenses.reduce((acc, curr) => {
